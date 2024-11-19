@@ -56,6 +56,8 @@ class MainActivity : AppCompatActivity() {
             downloadComic(numberEditText.text.toString())
         }
 
+        file = File(filesDir, internalFilename)
+
         if(file.exists()){
             try {
                 val br = BufferedReader(FileReader(file))
@@ -72,7 +74,7 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        file = File(filesDir, internalFilename)
+
 
     }
 
